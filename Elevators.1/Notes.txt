@@ -1,0 +1,57 @@
+// Programmer: Rachael Moy
+// Programmer's ID: 0136068
+
+#include <iostream>
+using namespace std;
+
+struct Rider {
+    const int from, to;
+    Rider(int, int);
+    Rider& operator=(const Rider&);
+};
+
+
+int main()
+{
+    // identification output code block
+    cout << "Programmer: Rachael Moy\n";
+    cout << "Programmer's ID: 0136068\n";
+    cout << "File: " << __FILE__ << endl;
+    cout << endl;
+
+
+    // basic logic
+    //
+    // Open their door if there is a rider to disembark
+    // Disembark a rider if the door is open and there's a rider who wants to get off
+    // board a rider if the door is open and a rider wants to board
+    // hold the door open for a few seconds more in case more riders show up
+    // after waiting a few seconds, and there are riders on the elevator, close the door and get moving
+    // if the elevator is already between floors, keep moving -- stop at a floor if its panel button is pressed
+    // if an elevator is idle and the up/down button is pressed, open the door for the rider to board
+    // if there's a floor with a lit up/down button, close the door and start moving there
+    // close the door and go idle
+    // this is an if/else if/else strucure
+
+
+    // riders
+    // 
+    // riders have references to their starting floor, and their floor destination
+    // can communicate where they are and where they're going
+    // can determine if they need to go up or down
+    // upon arrival rider exits simulation (disappears)
+
+    // Floors
+    //
+    // elevation (inches above ground)
+    // name (ex. mezzanine)
+    // abbreviated label for their name as appears on button
+    // a queue of riders waiting for an up-going elevator
+    // a queue of riders wating for a down-going elevator
+    // a panel with two buttons for riders to press for going up or going down
+
+    //floors can add and remove riders from their up/down rider queues
+    // floors know their elevation and compare themselves to other floors and elevators to determine if above or below
+
+    return 0;
+}
